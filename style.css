@@ -3,8 +3,8 @@ html, body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: rgb(63, 63, 63);
-    color: aliceblue;
+    /* background-color: rgb(63, 63, 63);
+    color: aliceblue; */
 }
 main{
     height: 100%;
@@ -26,8 +26,12 @@ input{
 #contenedor-lista{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+    gap: 10px;
+    /* Equivale mas o menos a una linea con fuente normal */
 }
 #div-limpiar{
     padding-top: 10px;
@@ -46,4 +50,5 @@ input{
 .list-element{
     font-size: 30px;
     font-weight: 900;
+    
 }
