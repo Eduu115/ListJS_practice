@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
     const formulario = document.getElementById("form");
     const contenedor_lista = document.getElementById("contenedor-lista");
     const boton_reiniciar = document.getElementById("limpiar");
@@ -6,37 +7,39 @@ document.addEventListener("DOMContentLoaded", function () {
     let inputs = [];
 
     formulario.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que la página se recargue
+        event.preventDefault();//no-reload para no perder los datos
 
         let form_input = document.getElementById("list-element").value;
 
         if (form_input.trim() !== "") {
-            inputs.push(form_input); // Guardamos en el array
-            actualizarLista(); // Llamamos a la función para renderizar la lista
-            document.getElementById("list-element").value = ""; // Limpiar input
+            inputs.push(form_input);//añadimos el array
+            actualizarLista();
+            document.getElementById("list-element").value = ""; 
         }
 
         console.log("Lista actualizada:", inputs);
     });
 
     boton_reiniciar.addEventListener("click", function () {
-        inputs = []; // Vaciar el array
-        actualizarLista(); // Limpiar la lista en la pantalla
+        inputs = []; 
+        actualizarLista();
         console.log("Lista reiniciada");
     });
 
     function actualizarLista() {
-        contenedor_lista.innerHTML = ""; // Limpiamos la lista antes de actualizar
+        //limpiar lista
+        contenedor_lista.innerHTML = "";
 
         inputs.forEach((item, index) => {
             let div = document.createElement("div");
             div.classList.add("list-element");
             div.textContent = item;
 
-            // Agregar evento para eliminar el elemento al hacer clic
+            //fincuon de hacer clic y elimnminar
             div.addEventListener("click", function () {
-                inputs.splice(index, 1); // Eliminar del array
-                actualizarLista(); // Volver a renderizar la lista
+                inputs.splice(index, 1); 
+                // Eliminamos
+                actualizarLista();
             });
 
             contenedor_lista.appendChild(div);
