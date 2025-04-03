@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista con JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="conj-titulos">
+                <h1>Lista tus elementos!!</h1>
+                <h4>Introduce lo que sea en el campo de abajo para añadirlo a la lista</h4>
+            </div>
+            <!-- Espacio como un "subheader" -->
+            <form action="#">
+                <!-- Cada form-element es una columna del form -->
+                <div class="form-element">
+                    <label for="list-element">Introduce el elemento</label>
+                    <input type="text" name="list-element" id="list-element" maxlength="255" minlength="2">
+                </div>
+
+                <div class="form-element">
+                    <input type="submit" name="submit-but" id="submit-but" value="Añadir">
+                </div>
+                
+            </form>
+        </header>
+
+        <!-- Elementos de la lista -->
+        <div id="contenedor-lista">
+
+            <!-- div elemento lista 1 -->
+            <!-- div elemento lista 2 -->
+            <!-- div elemento lista 3 -->
+
+        </div>
+
+    </main>
+</body>
+</html>
