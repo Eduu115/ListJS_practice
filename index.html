@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista con JavaScript</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <main>
@@ -12,9 +13,10 @@
             <div class="conj-titulos">
                 <h1>Lista tus elementos!!</h1>
                 <h4>Introduce lo que sea en el campo de abajo para añadirlo a la lista</h4>
+                <h6>haz clic encima de cualquier elemento para eliminarlo o, elimina todos pulsando limpiar</h6>
             </div>
             <!-- Espacio como un "subheader" -->
-            <form action="#">
+            <form id="form">
                 <!-- Cada form-element es una columna del form -->
                 <div class="form-element">
                     <label for="list-element">Introduce el elemento</label>
@@ -26,11 +28,18 @@
                 </div>
                 
             </form>
+
+            <div id="div-limpiar">
+                <button name="limpiar" id="limpiar">Limpiar lista</button>    
+            </div>
+            
+
+            <script src="main.js"></script>
         </header>
 
         <!-- Elementos de la lista -->
         <div id="contenedor-lista">
-
+            
             <!-- div elemento lista 1 -->
             <!-- div elemento lista 2 -->
             <!-- div elemento lista 3 -->

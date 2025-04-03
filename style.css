@@ -10,11 +10,11 @@ main{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 30% 70%;
     gap: 0;
 }
 form{
-    padding-top: 20px;
+    padding-top: 10px;
     gap: 10px;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,11 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+#div-limpiar{
+    padding-top: 10px;
+    justify-self: center;
 }
 
 .conj-titulos{
@@ -37,4 +42,8 @@ input{
     flex-direction: row;
     justify-content: center;
     gap: 10px;
+}
+.list-element{
+    font-size: 30px;
+    font-weight: 900;
 }
